@@ -1,4 +1,4 @@
-package CrashCourse;
+// package CrashCourse;
 
 public class Sneaker {
     private String brand;
@@ -40,6 +40,7 @@ public class Sneaker {
 
     public void sell() {
         isSold = true;
+        amountInStock -= 1;
 
     }
 
