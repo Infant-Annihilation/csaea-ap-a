@@ -79,7 +79,7 @@ public class Library {
     public void checkDueStatus() {
         if(isBorrowed) {
             if(daysWithBook <= 10) {
-                System.out.println("Days left with book: " + "\n");
+                System.out.println("Days left with book: ");
                 System.out.println(10 - daysWithBook);
                 System.out.println();
             } else {
