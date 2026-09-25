@@ -46,6 +46,7 @@ public class Library {
             System.out.println("You have returned " + bookTitle + "\n");
             isBorrowed = false;
             daysWithBook = 0;
+            isPastDue = false;
         } else {
             System.out.println("You haven't borrowed this book, so you can't return it." + "\n");
         }
@@ -64,12 +65,12 @@ public class Library {
 
     public void passDayWithBook() {
         if(isBorrowed) {
-            System.out.println("You have had this book for " + daysWithBook + " day(s)." + "\n");
-            daysWithBook += 1;
             if(daysWithBook > 10) {
                 System.out.println("This book is overdue!" + "\n");
                 isPastDue = true;
             }
+            System.out.println("You have had this book for " + daysWithBook + " day(s)." + "\n");
+            daysWithBook += 1;
         } else {
             System.out.println("You don't have this book." + "\n");
         }
