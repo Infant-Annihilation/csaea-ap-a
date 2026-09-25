@@ -6,5 +6,35 @@ public class LibraryTester{
 
         book1.displayBookInfo();
         book2.displayBookInfo();
+
+        book1.assignDeweyDecimal(823.754);
+        book1.borrowBook();
+        book1.passDayWithBook();
+        book1.passDayWithBook();
+        book1.checkDueStatus();
+        book1.returnBook();
+
+        book2.borrowBook();
+        book2.passDayWithBook();
+        book2.passDayWithBook();
+        book2.passDayWithBook();
+        book2.passDayWithBook();
+        book2.passDayWithBook();
+        book2.passDayWithBook();
+        book2.passDayWithBook();
+        book2.passDayWithBook();
+        book2.passDayWithBook();
+        book2.passDayWithBook();
+        book2.passDayWithBook();
+        book2.checkDueStatus();
+        book2.ripPage();
+        book2.returnBook();
+
+        book1.displayBookInfo();
+        book2.displayBookInfo();
+
+        book1.passDayWithBook();
+        book2.returnBook();
+
     }
 }

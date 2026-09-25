@@ -26,6 +26,7 @@ public class Library {
 
     public void assignDeweyDecimal(double newDeweyDecimal) {
         deweyDecimal = newDeweyDecimal;
+        System.out.println("You have assigned " + bookTitle + " a Dewey Decimal number.");
 
     }
 
@@ -33,7 +34,7 @@ public class Library {
         if(isBorrowed) {
             System.out.println(bookTitle + " is currently borrowed.");
         } else {
-            System.out.println("You have borrowed " + bookTitle);
+            System.out.println("You have borrowed " + bookTitle + "\n");
             isBorrowed = true;
             daysWithBook += 1;
         }
@@ -42,11 +43,11 @@ public class Library {
 
     public void returnBook() {
         if(isBorrowed) {
-            System.out.println("You have returned " + bookTitle);
+            System.out.println("You have returned " + bookTitle + "\n");
             isBorrowed = false;
             daysWithBook = 0;
         } else {
-            System.out.println("You haven't borrowed this book, so you can't return it.");
+            System.out.println("You haven't borrowed this book, so you can't return it." + "\n");
         }
     }
 
@@ -56,34 +57,34 @@ public class Library {
     }
 
     public void ripPage() {
-        System.out.println("You tore out a page... Why would you do that...");
+        System.out.println("You tore out a page... Why would you do that..." + "\n");
         pageCount -= 1;
 
     }
 
     public void passDayWithBook() {
         if(isBorrowed) {
-            System.out.println("You have had this book for " + daysWithBook + " days.");
+            System.out.println("You have had this book for " + daysWithBook + " day(s)." + "\n");
             daysWithBook += 1;
             if(daysWithBook > 10) {
-                System.out.println("This book is overdue!");
+                System.out.println("This book is overdue!" + "\n");
                 isPastDue = true;
             }
         } else {
-            System.out.println("You don't have this book.");
+            System.out.println("You don't have this book." + "\n");
         }
     }
 
     public void checkDueStatus() {
         if(isBorrowed) {
             if(daysWithBook <= 10) {
-                System.out.println("Days left with book: ");
+                System.out.println("Days left with book: " + "\n");
                 System.out.println(10 - daysWithBook);
             } else {
-                System.out.println("This book is past due!");
+                System.out.println("This book is past due!" + "\n");
             }
         } else {
-            System.out.println("You don't have this book.");
+            System.out.println("You don't have this book." + "\n");
         }
     }
     
