@@ -26,7 +26,7 @@ public class Library {
 
     public void assignDeweyDecimal(double newDeweyDecimal) {
         deweyDecimal = newDeweyDecimal;
-        System.out.println("You have assigned " + bookTitle + " a Dewey Decimal number.");
+        System.out.println("You have assigned " + bookTitle + " a Dewey Decimal number." + "\n");
 
     }
 
@@ -80,6 +80,7 @@ public class Library {
             if(daysWithBook <= 10) {
                 System.out.println("Days left with book: " + "\n");
                 System.out.println(10 - daysWithBook);
+                System.out.println();
             } else {
                 System.out.println("This book is past due!" + "\n");
             }
