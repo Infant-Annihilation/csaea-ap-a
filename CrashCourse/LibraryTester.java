@@ -36,5 +36,8 @@ public class LibraryTester{
         book1.passDayWithBook();
         book2.returnBook();
 
+        book2.displayDebt();
+        book2.payDebt(.25);
+
     }
 }
