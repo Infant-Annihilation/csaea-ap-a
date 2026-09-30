@@ -1,6 +1,6 @@
 public class Library {
     
-    private String bookTitle;
+    private String bookTitle; // variables
     private String bookAuthor;
     private int pageCount;
     private double deweyDecimal;
@@ -15,12 +15,12 @@ public class Library {
     
     public Library(String bookTitle, String bookAuthor, int pageCount, String bookPublisher, int bookPublishYear) {
         this.bookTitle = bookTitle;
-        this.bookAuthor = bookAuthor;
+        this.bookAuthor = bookAuthor; // constructor things here, takes the title, author, pg. count, publisher, and publish year
         this.pageCount = pageCount;
         this.bookPublisher = bookPublisher;
         this.bookPublishYear = bookPublishYear;
 
-        isBorrowed = false;
+        isBorrowed = false; // default values
         isPastDue = false;
         daysWithBook = 0;
         daysPastDue = 0;
@@ -50,7 +50,7 @@ public class Library {
             isBorrowed = false;
             daysWithBook = 0;
             isPastDue = false;
-            daysPastDue = 0;
+            daysPastDue = 0; // debt is NOT cleared, you have to call payDebt()
         } else {
             System.out.println("You haven't borrowed this book, so you can't return it.\n");
         }
@@ -58,7 +58,7 @@ public class Library {
 
     public void displayBookInfo() {
         System.out.println("Title: " + bookTitle + "\n" + "Author: " + bookAuthor + "\n" + "Page count: " + pageCount + "\n" + "Dewey Decimal: " + deweyDecimal + "\n" + "Borrow status: " + isBorrowed + "\n" + "Overdue status: " + isPastDue + "\n" + "Publisher: " + bookPublisher + "\n" + "Year published: " + bookPublishYear + "\n" + "Days past due: " + daysPastDue + "\n");
-
+        // use word wrap in codespaces
     }
 
     public void ripPage() {
@@ -103,7 +103,7 @@ public class Library {
     public void payDebt(double amountPaid) {
         if(amountPaid > 0) {
             debt -= amountPaid;
-            if(debt < 0) {
+            if(debt < 0) { // prevents negative debt
                 debt = 0;
             }
             System.out.println("You paid $" + String.format("%.2f", amountPaid) + ".\n");
