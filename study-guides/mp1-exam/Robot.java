@@ -46,7 +46,7 @@ public class Robot {
      }
 
      public String toString() {
-        return name + " [" + serial + "]";
+        return name + "[" + serial + "]";
      }
 
     // indexOf: returns index, or -1 if not found
@@ -57,4 +57,12 @@ public class Robot {
     public boolean boolSerialContains(String part) {
         return serial.indexOf(part) != -1;
     }
+
+    public void chargeBattery(double hours) {
+        battery += (hours * 10);
+        if(battery > 100) {
+            battery = 100;
+        }
+    }
+
 }

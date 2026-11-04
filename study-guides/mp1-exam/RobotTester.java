@@ -39,5 +39,18 @@ public class RobotTester {
 
         System.out.println(r1.boolSerialContains("77"));
         System.out.println(r1.boolSerialContains("rx"));
+
+        System.out.println();
+        Robot johnny = new Robot("Johnny", "55-JXD-9R", 95.2);
+        johnny.chargeBattery(3.0);
+        System.out.println(johnny.getBattery());
+
+        System.out.println(johnny);
+
+        r1.chargeBattery(5.7);
+        r2.chargeBattery(5.7);
+
+        System.out.println(r1.getBattery());
+        System.out.println(r2.getBattery());
     }
 }
