@@ -7,7 +7,8 @@ public class Robot {
     private String name;
     private String serial;
     private double battery;
-    private boolean isOn; 
+    private boolean isOn;
+    private static int robotCount;
 
     // Constructor:
     // Special method: starting point for new objects
@@ -21,6 +22,11 @@ public class Robot {
         this.battery = battery;
 
         this.isOn = false;
+    }
+
+    public void randomDrain() {
+        double drain = Math.random() * 10;
+        battery -= Math.max(0, battery - drain);
     }
 
     // Getter/Accessor: return type matches variable
